@@ -1,0 +1,169 @@
+
+/* Configurações gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #17324d;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+/* Conteúdo principal */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    color: #17324d;
+}
+
+/* Botões */
+button {
+    background-color: #2176ae;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #155a86;
+}
+
+/* Adaptação para telas menores */
+@media (max-width: 600px) {
+    main {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+}
+
+/* Formulário de chamados */
+#cadastroChamado {
+    margin-top: 30px;
+}
+
+#formChamado {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#formChamado label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#formChamado input,
+#formChamado textarea,
+#formChamado select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+#formChamado textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+#formChamado button {
+    align-self: flex-start;
+    margin-top: 15px;
+}
+
+/* Lista de chamados */
+#listaChamados {
+    margin-top: 30px;
+}
+
+.tabela-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #17324d;
+    color: white;
+}
+
+tbody tr:hover {
+    background-color: #f4f6f8;
+}
+
+
+
+/* Painel de acompanhamento */
+.resumo-chamados {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.resumo-card {
+    flex: 1;
+    background-color: #f4f6f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.resumo-card h3 {
+    color: #17324d;
+    font-size: 16px;
+    margin: 0;
+}
+
+.resumo-card p {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+/* Adaptação para celulares */
+@media (max-width: 600px) {
+    .resumo-chamados {
+        flex-direction: column;
+    }
+}

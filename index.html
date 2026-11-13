@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemental - Gerenciamento de Chamados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Elemental Manutenção de Elevadores</h1>
+        <p>Sistema de Gerenciamento de Chamados Técnicos</p>
+    </header>
+
+    <main>
+        <h2>Painel de Chamados</h2>
+        <p>Bem-vindo ao sistema de gerenciamento de chamados.</p>
+
+<div class="resumo-chamados">
+    <div class="resumo-card">
+        <h3>Abertos</h3>
+        <p id="totalAbertos">0</p>
+    </div>
+
+    <div class="resumo-card">
+        <h3>Em andamento</h3>
+        <p id="totalAndamento">0</p>
+    </div>
+
+    <div class="resumo-card">
+        <h3>Concluídos</h3>
+        <p id="totalConcluidos">0</p>
+    </div>
+</div>
+
+
+        <button type="button" id="btnNovoChamado">
+            Novo Chamado
+        </button>
+
+        <section id="listaChamados">
+            <h2>Chamados Cadastrados</h2>
+
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nº</th>
+                            <th>Condomínio</th>
+                            <th>Elevador</th>
+                            <th>Prioridade</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoTabela"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="cadastroChamado" hidden>
+            <h2>Cadastrar Chamado Técnico</h2>
+
+            <form id="formChamado">
+                <label for="condominio">Condomínio:</label>
+                <input type="text" id="condominio" required>
+
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" required>
+
+                <label for="elevador">Identificação do elevador:</label>
+                <input type="text" id="elevador" required>
+
+                <label for="descricao">Descrição do problema:</label>
+                <textarea id="descricao" required></textarea>
+
+                <label for="prioridade">Prioridade:</label>
+                <select id="prioridade">
+                    <option value="Baixa">Baixa</option>
+                    <option value="Média">Média</option>
+                    <option value="Alta">Alta</option>
+                </select>
+
+                <label for="status">Status:</label>
+                <select id="status">
+                    <option value="Aberto">Aberto</option>
+                    <option value="Em andamento">Em andamento</option>
+                    <option value="Concluído">Concluído</option>
+                </select>
+
+                <button type="submit">Salvar Chamado</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
